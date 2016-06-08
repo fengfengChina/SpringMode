@@ -1,22 +1,10 @@
 package demo;
 
-import java.io.IOException;
-import java.security.Principal;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+//import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -35,11 +23,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.WebUtils;
 
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.security.Principal;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 @Configuration
 @ComponentScan
 @EnableAutoConfiguration
 @Controller
-@EnableZuulProxy
+//@EnableZuulProxy
 public class GatewayApplication {
 
 	@RequestMapping("/user")
