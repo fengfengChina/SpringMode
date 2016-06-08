@@ -22,6 +22,19 @@ hs_err_pid*
 *.lock
 
 *.build
-*.xml
-*.gradle
-*.idea
+
+*.iml
+
+build
+
+*.iml
+
+.gradle
+
+*.iml
+
+resources/resources.iml
+
+resources/resources.iml
+
+*.iml
