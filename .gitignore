@@ -31,10 +31,4 @@ build
 
 .gradle
 
-*.iml
 
-resources/resources.iml
-
-resources/resources.iml
-
-*.iml
