@@ -17,7 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class AdminApplication {
-
+	/**
+	 * 获取用户信息 返回用户的权限姓名信息
+	 * @param user 用户信息
+	 * @return
+	 */
 	@RequestMapping("/user")
 	public Map<String, Object> user(Principal user) {
 		Map<String, Object> map = new LinkedHashMap<String, Object>();
@@ -31,6 +35,9 @@ public class AdminApplication {
 		SpringApplication.run(AdminApplication.class, args);
 	}
 
+	/**
+	 * 添加security 到ioc 容器里面
+	 */
 	@Configuration
 	protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		@Override
